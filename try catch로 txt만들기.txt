@@ -1,0 +1,10 @@
+public static void main(String[] args) {
+		try {
+			FileWriter f = new FileWriter("data.txt"); // IOExcaption 즉 반드시 예외 처리를 해줘야한다.
+			f.write("Hello");
+			f.close(); 
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+	}
