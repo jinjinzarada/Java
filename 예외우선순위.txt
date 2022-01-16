@@ -8,6 +8,7 @@ public static void main(String[] args) {
 			System.out.println(2 / 0); // 예상못한 예외적인 상황 //위에 예외때문에 실행될 기회가 사라짐
 			System.out.println(4); // 위에 예외때문에 실행될 기회가 사라짐
 		} catch (ArithmeticException e) { // (2/0)에 대한 오류
+			System.out.println("계산이 잘못됐습니다. ");
 		} catch (Exception e) { //예외의 부모 , 예외 다 포괄  catch 문을 어디놔두냐에 따라서 우선순위가 달라짐.
 			System.out.println("뭔가 이상합니다. 오류가 발생했습니다. ");
 		}
