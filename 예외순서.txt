@@ -1,0 +1,21 @@
+public static void main(String[] args) {
+		System.out.println(1);
+		int[] scores = { 10, 20, 30 };
+		try {
+			System.out.println(2);
+			System.out.println(scores[3]);// ArrayIndexOutOfBoundsException
+			System.out.println(3);                         // 위에 예외때문에 실행될 기회가 사라짐
+			System.out.println(2 / 0); // 예상못한 예외적인 상황 //위에 예외때문에 실행될 기회가 사라짐
+			System.out.println(4);                        // 위에 예외때문에 실행될 기회가 사라짐
+		} catch (ArrayIndexOutOfBoundsException e) {
+			System.out.println("없는 값을 찾고계시네요 ");
+		} catch (ArithmeticException e) {
+			System.out.println("잘못된 계산이네요"); // 처리해야할 작업을 적어야함
+		}
+		System.out.println(5); // 위에서 잘못되면 실행 안됨 , try catch 문으로 실행가능하게 됨
+
+	}
+1
+2
+없는 값을 찾고계시네요 
+5
