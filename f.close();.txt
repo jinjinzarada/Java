@@ -1,0 +1,20 @@
+public static void main(String[] args) {
+		FileWriter f = null; // null: 값이 없다.
+		try {
+			f = new FileWriter("data.txt"); // IOExcaption 즉 반드시 예외 처리를 해줘야한다.
+			f.write("Hello");
+			// close 를 하기 전에 예외가 발생할 수 있기 떄문에 finally를 처리해야 한다.
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			//만약에 f가 null이 아니라면 실행해라
+			if(f!=null) {
+				try {
+			f.close();
+				}catch(IOException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+
+	}
