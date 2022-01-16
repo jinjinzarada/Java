@@ -1,0 +1,24 @@
+public static void main(String[] args) {
+		System.out.println(1);
+		int[] scores = { 10, 20, 30 };
+		try {
+			System.out.println(2);
+//			System.out.println(scores[3]);// ArrayIndexOutOfBoundsException
+			System.out.println(3); // 위에 예외때문에 실행될 기회가 사라짐
+			System.out.println(2 / 0); // 예상못한 예외적인 상황 //위에 예외때문에 실행될 기회가 사라짐
+			System.out.println(4); // 위에 예외때문에 실행될 기회가 사라짐
+		} catch (ArithmeticException e) { // (2/0)에 대한 오류
+			System.out.println("계산이 잘못된거 같아요" + e.getMessage()); // by zero
+			e.printStackTrace();
+		} catch (Exception e) { // 예외의 부모 , 예외 다 포괄 catch 문을 어디놔두냐에 따라서 우선순위가 달라짐.
+			System.out.println("뭔가 이상합니다. 오류가 발생했습니다. ");
+		}
+			System.out.println(5); // 위에서 잘못되면 실행 안됨 , try catch 문으로 실행가능하게 됨
+		}
+1
+2
+3
+계산이 잘못된거 같아요/ by zero
+java.lang.ArithmeticException: / by zero
+	at myHomework.JustDoIt.main(JustDoIt.java:12)
+5
