@@ -1,0 +1,24 @@
+public class JustDoIt {
+
+	public static void main(String[] args) {
+		System.out.println(1);
+		int[] scores = { 10, 20, 30 };
+		try {
+			System.out.println(scores[3]); // ArrayIndexOutOfBoundsException
+		} catch (ArrayIndexOutOfBoundsException e) {
+			System.out.println("없는 값을 찾고계시네요 ");
+		}
+		try {
+			System.out.println(2 / 0); // 예상못한 예외적인 상황
+		} catch (ArithmeticException e) {
+			System.out.println("잘못된 계산이네요"); // 처리해야할 작업을 적어야함
+		}
+		System.out.println(3); // 위에서 잘못되면 실행 안됨  , try catch 문으로 실행가능하게 됨  
+
+	}
+}
+
+1
+없는 값을 찾고계시네요 
+잘못된 계산이네요
+3
