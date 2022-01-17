@@ -1,0 +1,23 @@
+public static void main(String[] args) {
+		ArrayList list = new ArrayList();
+		list.add(1);
+		list.add(2);
+		list.add("3");
+
+		Integer i = (Integer) list.get(2);
+		System.out.println(list);
+	}
+Exception in thread "main" java.lang.ClassCastException: class java.lang.String cannot be cast to class java.lang.Integer (java.lang.String and java.lang.Integer are in module java.base of loader 'bootstrap')
+	at myHomework.JustDoIt.main(JustDoIt.java:13)
+
+
+public static void main(String[] args) {
+		ArrayList<Integer> list = new ArrayList<Integer>();
+		list.add(1);
+		list.add(2);
+		list.add(3);
+
+		Integer i = list.get(2);
+		System.out.println(list);
+	}
+[1, 2, 3]
