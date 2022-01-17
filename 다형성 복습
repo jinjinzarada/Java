@@ -1,0 +1,13 @@
+부모타입 참조변수로 자식타입 객체를 다루는 것
+class Tv{
+}
+class SmartTv extends Tv {
+}
+Tv는 부모 SmartTv는 자식
+
+다형성 이전에는 Tv t = new Tv();
+               SmartTv s = new SmartTv();
+다형성 이후에는 Tv t = new SmartTv(); //반대가 되면 안된다. 
+즉 자손타입의 참조변수로 조상타입의 객체를 가리킬 수 없다. 
+다형성을 통해 참조변수 타입은 인스턴스 타입과 불일치해도 가능하다.]
+참조변수 부모와 자식차이는 멤버갯수가 달라진다. 
