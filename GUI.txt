@@ -1,0 +1,25 @@
+// ConStructor
+	public CountDownTest() {
+		this.setTitle("카운트다운 프로그램");
+		this.setSize(300, 200);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+		label = new JLabel("시작");
+		// labe.set.Text("Start");
+		label.setFont(new Font("Serif", Font.BOLD, 100));
+		label.setAlignmentX(CENTER_ALIGNMENT);
+		this.add(label, BorderLayout.CENTER);
+
+		startBtn = new JButton("카운트 시작하기");
+		this.add(startBtn, BorderLayout.SOUTH);
+
+		// 버튼에 이벤트 설정함 : 익명(Annoymus) 클래스 이용
+		startBtn.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// 버튼을 클릭하면 스레드가 스타트되게 함
+				new CountThread().start();
+
+			}
+		});
