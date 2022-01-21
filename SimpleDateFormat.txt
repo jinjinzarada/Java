@@ -1,0 +1,15 @@
+Date now = new Date();
+		System.out.println(now);
+		SimpleDateFormat ft = new SimpleDateFormat("yyyy.MM.dd hh:mm:ss [a] E");
+		String nowFt = ft.format(now);
+		System.out.println(nowFt);
+
+		String myDateStr = "2020-01-18 15:14:35";
+		Date myDate = null;
+		try {
+			myDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(myDateStr);
+		} catch (ParseException e) {
+			e.printStackTrace();
+			myDate = new Date();
+		}
+		System.out.println(ft.format(myDate));
