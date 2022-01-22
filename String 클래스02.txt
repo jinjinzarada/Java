@@ -1,0 +1,22 @@
+String str = "Hello Java";
+		String concat, upperString, replace, subString;
+
+		System.out.println("기본 String: " + str);
+		System.out.println("기본 String 길이: " + str.length());
+
+		concat = str.concat(", Hi Java");
+		upperString = concat.toUpperCase();
+		replace = upperString.replace('J', 'L');
+		subString = replace.substring(3, 10);
+
+		System.out.println("Concat String: " + concat);
+		System.out.println("UpperString: " + upperString);
+		System.out.println("Replace: " + replace);
+		System.out.println("Substring: " + subString);
+
+기본 String: Hello Java
+기본 String 길이: 10
+Concat String: Hello Java, Hi Java
+UpperString: HELLO JAVA, HI JAVA
+Replace: HELLO LAVA, HI LAVA
+Substring: LO LAVA
