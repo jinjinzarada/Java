@@ -1,0 +1,13 @@
+String text = "홍길동/이수홍/박연수";
+		StringTokenizer st = new StringTokenizer(text,"/");
+		int countTokens = st.countTokens();
+		System.out.println(countTokens);
+		
+		while(st.hasMoreTokens()) {
+			String token = st.nextToken();
+			System.out.println(token);
+
+3
+홍길동
+이수홍
+박연수
