@@ -1,0 +1,19 @@
+StringBuffer str1 = new StringBuffer();
+		StringBuffer str2 = new StringBuffer(30);
+		StringBuffer str3 = new StringBuffer(" java");
+		StringBuffer str4 = new StringBuffer("01234");
+
+		str1.append("Hi");
+		str2.append("Hello");
+		str3.insert(0, str2 + "");
+		str4.insert(4, ".");
+
+		System.out.println(str1);
+		System.out.println(str2);
+		System.out.println(str3);
+		System.out.println(str4);
+
+Hi
+Hello
+Hello java
+0123.4
