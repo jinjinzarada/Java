@@ -1,0 +1,26 @@
+		StringBuffer str = new StringBuffer("012345");
+		StringBuffer str2 = new StringBuffer("012345");
+		StringBuffer str3 = new StringBuffer("0123456");
+		StringBuffer str4 = new StringBuffer("0123456");
+		StringBuffer sb = new StringBuffer("smile");
+
+		str.reverse();
+		str2.setCharAt(5, 'o');
+		str3.setLength(4);
+		str4.setLength(10);
+		String str5 = sb.substring(3);
+		String str6 = sb.substring(1, 4);
+		
+		System.out.println(str);
+		System.out.println(str2);
+		System.out.println(str3);
+		System.out.println(str4);
+		System.out.println(str5);
+		System.out.println(str6);
+
+543210
+01234o
+0123
+0123456
+le
+mil
