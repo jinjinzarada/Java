@@ -1,0 +1,4 @@
+		Formatter f = new Formatter(System.out);
+		f.format("\'%s\', %d,%d\n","String",10,20); 
+
+'String', 10,20
